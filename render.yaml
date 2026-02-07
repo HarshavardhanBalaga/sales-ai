@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: sales-call-analyzer
+    env: python
+    buildCommand: |
+      pip install -r requirements.txt
+      apt-get update && apt-get install -y ffmpeg
+    startCommand: streamlit run app/main.py --server.port=8080 --server.address=0.0.0.0
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9.0
+    plan: free
+    autoDeploy: true

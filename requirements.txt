@@ -1,0 +1,11 @@
+streamlit
+pandas
+numpy
+plotly
+torch
+torchaudio
+transformers
+accelerate
+sentencepiece
+openai-whisper
+pydub
